@@ -1,0 +1,252 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Portofolio Data - Denny Wicaksono</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="assets/css/main.css" />
+        <style>
+            /* Gaya tambahan untuk halaman portofolio data */
+            .portfolio-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+                gap: 2rem;
+                padding: 2rem 0;
+            }
+            .portfolio-card {
+                background: white;
+                border-radius: 8px;
+                padding: 1.5rem;
+                box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+                transition: transform 0.2s ease, box-shadow 0.2s ease;
+                border-top: 4px solid #1a7a5a;
+            }
+            .portfolio-card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+            }
+            .portfolio-card h3 {
+                margin: 0 0 0.5rem;
+                color: #1a7a5a;
+            }
+            .portfolio-card .badge {
+                display: inline-block;
+                background: #eef4f8;
+                color: #2c6e9c;
+                font-size: 0.7rem;
+                padding: 0.2rem 0.8rem;
+                border-radius: 20px;
+                text-transform: uppercase;
+                font-weight: bold;
+                letter-spacing: 0.5px;
+                margin-bottom: 0.5rem;
+            }
+            .portfolio-card p {
+                font-size: 0.9rem;
+                color: #555;
+                line-height: 1.6;
+            }
+            .portfolio-card .btn {
+                display: inline-block;
+                background: #1a7a5a;
+                color: white;
+                padding: 0.5rem 1.5rem;
+                border-radius: 30px;
+                text-decoration: none;
+                font-size: 0.85rem;
+                font-weight: bold;
+                transition: background 0.2s ease;
+                margin-top: 0.5rem;
+            }
+            .portfolio-card .btn:hover {
+                background: #146a4a;
+            }
+            .back-link {
+                display: inline-block;
+                margin: 1rem 0 2rem;
+                color: #1a7a5a;
+                text-decoration: none;
+                font-weight: bold;
+            }
+            .back-link:hover {
+                text-decoration: underline;
+            }
+            .iframe-container {
+                margin-top: 1rem;
+                border-radius: 8px;
+                overflow: hidden;
+                border: 1px solid #ddd;
+            }
+            .iframe-container iframe {
+                width: 100%;
+                height: 500px;
+                border: none;
+                display: block;
+            }
+            /* Untuk tampilan mobile */
+            @media screen and (max-width: 736px) {
+                .portfolio-grid {
+                    grid-template-columns: 1fr;
+                }
+                .iframe-container iframe {
+                    height: 350px;
+                }
+            }
+        </style>
+    </head>
+    <body class="is-preload">
+
+        <!-- Wrapper -->
+        <div id="wrapper">
+
+            <!-- Header -->
+            <header id="header">
+                <h1><a href="index.html">Denny Wicaksono - CV</a></h1>
+                <nav class="links">
+                    <ul>
+                        <li><a href="index.html">Beranda</a></li>
+                        <li><a href="peta-intervensi.html">📍 Peta</a></li>
+                        <li><a href="portofolio-data.html">📊 Data</a></li>
+                        <li><a href="gallery.html">Galeri</a></li>
+                    </ul>
+                </nav>
+                <nav class="main">
+                    <ul>
+                        <li class="search">
+                            <a class="fa-search" href="#search">Search</a>
+                            <form id="search" method="get" action="#">
+                                <input type="text" name="query" placeholder="Search" />
+                            </form>
+                        </li>
+                        <li class="menu">
+                            <a class="fa-bars" href="#menu">Menu</a>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+
+            <!-- Menu Pop-up -->
+            <section id="menu">
+                <section>
+                    <form class="search" method="get" action="#">
+                        <input type="text" name="query" placeholder="Search" />
+                    </form>
+                </section>
+                <section>
+                    <ul class="links">
+                        <li><a href="index.html"><h3>Beranda</h3><p>CV &amp; Portofolio utama</p></a></li>
+                        <li><a href="peta-intervensi.html"><h3>📍 Peta Intervensi</h3><p>Wilayah kerja di seluruh Indonesia</p></a></li>
+                        <li><a href="portofolio-data.html"><h3>📊 Portofolio Data</h3><p>Dashboard &amp; analisis data</p></a></li>
+                        <li><a href="gallery.html"><h3>Galeri Kegiatan</h3><p>Dokumentasi program</p></a></li>
+                    </ul>
+                </section>
+                <section>
+                    <ul class="actions stacked">
+                        <li><a href="mailto:denny.hw7@gmail.com" class="button large fit">Hubungi Saya</a></li>
+                    </ul>
+                </section>
+            </section>
+
+            <!-- Main Content -->
+            <div id="main">
+                <article class="post">
+                    <header>
+                        <div class="title">
+                            <h2>📊 Portofolio Analisis Data</h2>
+                            <p>Dashboard, visualisasi, dan hasil olah data dari berbagai platform</p>
+                        </div>
+                    </header>
+
+                    <!-- Grid Portofolio -->
+                    <div class="portfolio-grid">
+
+                        <!-- ========================================= -->
+                        <!-- KARTU 1: LOOKER STUDIO -->
+                        <!-- ========================================= -->
+                        <div class="portfolio-card">
+                            <span class="badge">Looker Studio</span>
+                            <h3>Dashboard Cakupan Imunisasi</h3>
+                            <p>Visualisasi cakupan imunisasi PCV, RV, dan HPV di 7 kabupaten Jawa Tengah. Menampilkan tren per bulan dan kesenjangan cakupan.</p>
+                            
+                            <!-- MASUKKAN LINK LOOKER STUDIO ANDA DI BAWAH -->
+                            <div class="iframe-container">
+                                <iframe src="https://lookerstudio.google.com/embed/reporting/YOUR_REPORT_ID/page/XXXXX"></iframe>
+                            </div>
+                            
+                            <a href="https://lookerstudio.google.com/embed/reporting/YOUR_REPORT_ID/page/XXXXX" target="_blank" class="btn">🔗 Buka Fullscreen</a>
+                        </div>
+
+                        <!-- ========================================= -->
+                        <!-- KARTU 2: EXCEL / SPREADSHEET -->
+                        <!-- ========================================= -->
+                        <div class="portfolio-card">
+                            <span class="badge">Google Sheets</span>
+                            <h3>Integrated MNCH-Immunization Cohort</h3>
+                            <p>Alat kohort terintegrasi yang menggabungkan data ANC, persalinan, nifas, dan imunisasi dalam satu baris data per pasien.</p>
+                            
+                            <!-- MASUKKAN LINK GOOGLE SHEETS ANDA DI BAWAH -->
+                            <div class="iframe-container">
+                                <iframe src="https://docs.google.com/spreadsheets/d/YOUR_SHEET_ID/edit?usp=sharing"></iframe>
+                            </div>
+                            
+                            <a href="https://docs.google.com/spreadsheets/d/YOUR_SHEET_ID/edit?usp=sharing" target="_blank" class="btn">🔗 Buka Spreadsheet</a>
+                        </div>
+
+                        <!-- ========================================= -->
+                        <!-- KARTU 3: R / SHINY (Contoh) -->
+                        <!-- ========================================= -->
+                        <div class="portfolio-card">
+                            <span class="badge">R / Shiny</span>
+                            <h3>Analisis Pola Penyakit</h3>
+                            <p>Dashboard interaktif untuk analisis pola penyakit menular di Indonesia menggunakan R Shiny.</p>
+                            
+                            <!-- UNTUK SHINY, GUNAKAN LINK KE FOLDER HASIL EXPORT -->
+                            <div class="iframe-container">
+                                <iframe src="myapp-shiny/index.html"></iframe>
+                            </div>
+                            
+                            <a href="myapp-shiny/index.html" target="_blank" class="btn">🔗 Buka Aplikasi</a>
+                        </div>
+
+                        <!-- ========================================= -->
+                        <!-- KARTU 4: TABLEAU PUBLIC (OPSIONAL) -->
+                        <!-- ========================================= -->
+                        <div class="portfolio-card">
+                            <span class="badge">Tableau Public</span>
+                            <h3>Visualisasi Data Surveilans</h3>
+                            <p>Visualisasi data surveilans AFP dan polio di Indonesia menggunakan Tableau Public.</p>
+                            
+                            <!-- MASUKKAN LINK TABLEAU ANDA DI BAWAH -->
+                            <div class="iframe-container">
+                                <iframe src="https://public.tableau.com/views/YOUR_VIEW_ID/..." width="100%" height="500"></iframe>
+                            </div>
+                            
+                            <a href="https://public.tableau.com/views/YOUR_VIEW_ID/..." target="_blank" class="btn">🔗 Buka Tableau</a>
+                        </div>
+
+                    </div><!-- end portfolio-grid -->
+
+                    <footer>
+                        <ul class="actions">
+                            <li><a href="index.html" class="button">← Kembali ke CV</a></li>
+                        </ul>
+                    </footer>
+                </article>
+            </div>
+
+            <!-- Sidebar (tetap sama) -->
+            <section id="sidebar">
+                <!-- ... isi sidebar Anda yang sudah ada ... -->
+            </section>
+
+        </div><!-- end wrapper -->
+
+        <!-- Scripts -->
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/browser.min.js"></script>
+        <script src="assets/js/breakpoints.min.js"></script>
+        <script src="assets/js/util.js"></script>
+        <script src="assets/js/main.js"></script>
+
+    </body>
+</html>
